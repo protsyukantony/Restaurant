@@ -1,0 +1,167 @@
+.header {
+    width: 100%;
+    min-height: 1210px;
+    background-color: $primary;
+    font-family: 'Poppins', sans-serif;
+
+    &-inner {
+        width: 100%;
+        position: relative;
+    }
+
+    &-top {
+        width: 100%;
+        min-height: 108px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &-logo {
+        max-width: 250px;
+
+        &__img {
+            max-width: 100%;
+        }
+    }
+}
+
+.menu {
+    max-width: 600px;
+
+    &-list {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &__item {
+            margin-right: 45px;
+        }
+
+        &__link {
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 24px;
+            color: $text-blue;
+        }
+    }
+}
+
+.swiper {
+    &-container {
+        max-width: 100%;
+        min-height: 900px;
+    }
+
+    &-wrapper {
+        width: 100%;
+        min-height: 900px;
+    }
+
+    &-slide {
+        width: 100%;
+        min-height: 900px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+
+
+    &-text {
+        width: 50%;
+        min-height: 900px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+
+        &__accent {
+            font-weight: 900;
+            font-size: 200px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: rgba($text-blue, 0.05);
+        }
+
+        &__title {
+            font-weight: bold;
+            font-size: 72px;
+            line-height: 90px;
+            color: $text-blue;
+            margin-bottom: 40px;
+            margin-top: -30px;
+        }
+
+        &__form {
+            background-color: #fff;
+            min-width: 670px;
+            min-height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+
+            input {
+                font-weight: normal;
+                font-size: 18px;
+                line-height: 70px;
+                width: 320px;
+                margin-left: 40px;
+                color: $text-blue;
+                border: none;
+                outline: none;
+
+                &::placeholder {
+                    color: $text-blue;
+                }
+            }
+
+            button {
+                font-weight: 600;
+                font-size: 30px;
+                color: #fff;
+                text-transform: uppercase;
+                height: 72px;
+                width: 200px;
+                background-color: $secondary;
+                border: none;
+                outline: none;
+                border-top-left-radius: 60px;
+            }
+        }
+
+    }
+
+    &-image {
+        width: 50%;
+        min-height: 900px;
+        background: url('../images/salad.png') top center, url('../images/dot.svg')  left center;
+        background-repeat: no-repeat;
+        background-size: 60%;
+        position: relative;
+        
+        img {
+            position: absolute;
+            top: 146px;
+            left: 0;
+            max-width: 100%;
+        }
+        
+    }
+}
+
+.swiper-button-prev.swiper-button-disabled {
+    position: absolute;
+    top: 1000px;
+    left: 1400px;
+}
+
+
+.swiper-button-next.swiper-button-disabled {
+    position: absolute;
+    top: 1000px;
+
+}
