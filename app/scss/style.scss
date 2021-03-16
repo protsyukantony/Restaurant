@@ -1,5 +1,6 @@
 @import 'variable';
 @import 'header';
+@import 'food';
 
 
 * {
@@ -19,6 +20,14 @@ a {
     margin: 0 auto;
     padding: 0 15px;
 }
+
+.title {
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 62px;
+    color: $text-blue;
+}
+
 
 html,
 body,

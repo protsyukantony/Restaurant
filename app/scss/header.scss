@@ -3,10 +3,14 @@
     min-height: 1210px;
     background-color: $primary;
     font-family: 'Poppins', sans-serif;
+    position: relative;
 
     &-inner {
         width: 100%;
-        position: relative;
+    }
+
+    &-burger {
+        display: none;
     }
 
     &-top {
@@ -24,10 +28,37 @@
             max-width: 100%;
         }
     }
+
+    &-cabinet {
+        position: relative;
+        z-index: 2;
+
+        &__name {
+            color: #fff;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 24px;
+            margin-left: 9px;
+            position: relative;
+
+            &::after {
+                content: '';
+                background-image: url('../images/arrow-bottom.svg');
+                background-repeat: no-repeat;
+                width: 10px;
+                height: 10px;
+                position: absolute;
+                right: -15px;
+                top: 8px;
+            }
+        }
+    }
 }
 
 .menu {
     max-width: 600px;
+    position: relative;
+    z-index: 2;
 
     &-list {
         width: 100%;
@@ -138,30 +169,270 @@
     &-image {
         width: 50%;
         min-height: 900px;
-        background: url('../images/salad.png') top center, url('../images/dot.svg')  left center;
+        background: url('../images/salad.png') top center, url('../images/dot.svg') left center;
         background-repeat: no-repeat;
         background-size: 60%;
         position: relative;
-        
+
         img {
             position: absolute;
             top: 146px;
             left: 0;
             max-width: 100%;
         }
-        
+
     }
 }
 
-.swiper-button-prev.swiper-button-disabled {
+
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    display: none;
+}
+
+.swiper-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    background-repeat: no-repeat;
+    height: 45px;
+    width: 66px;
+    position: static;
+    margin-left: 40px;
+}
+
+.swiper-button-prev {
+    background-image: url('../images/prev.svg');
+}
+
+.swiper-button-next {
+    background-image: url('../images/next.svg');
+}
+
+.accent-block {
+    min-height: 1210px;
+    width: 27%;
+    background-color: $secondary;
     position: absolute;
-    top: 1000px;
-    left: 1400px;
+    right: 0;
+    top: 0;
 }
 
 
-.swiper-button-next.swiper-button-disabled {
+.header-label {
     position: absolute;
-    top: 1000px;
+    left: 0;
+    bottom: 230px;
+    width: 280px;
+    height: 65px;
+    background-color: $secondary;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__text {
+        font-weight: 500;
+        font-size: 30px;
+        line-height: 90px;
+        color: #fff;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 25px;
+            background-image: url('../images/location.svg');
+            left: -35px;
+            top: 32px;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .header {
+        min-height: 924px;
+
+        &-logo {
+            max-width: 205px;
+
+            &__img {
+                max-width: 100%;
+            }
+        }
+
+        &-burger {
+            display: flex;
+            position: relative;
+            z-index: 3;
+            width: 30px;
+            height: 20px;
+
+
+            &::before,
+            &::after {
+                content: '';
+                position: absolute;
+                background-color: #fff;
+                width: 100%;
+                height: 2px;
+                transition: .3s all ease;
+            }
+
+            &::before {
+                top: 0;
+            }
+
+            &::after {
+                bottom: 0;
+                width: 70%;
+                right: 0;
+                left: none;
+            }
+
+            span {
+                position: absolute;
+                background-color: #fff;
+                width: 100%;
+                height: 2px;
+                top: 9px;
+                transition: .3s all ease;
+            }
+        }
+
+
+        &-cabinet {
+            display: none;
+        }
+
+    }
+
+    .menu {
+        position: fixed;
+        left: 0;
+        top: -100%;
+        width: 100%;
+        max-width: 100%;
+        height: 100%;
+        background-color: $secondary;
+        transition: .3s all ease;
+
+        &-list {
+            display: flex;
+            flex-direction: column;
+
+            &__item {
+                margin: 30px;
+            }
+
+            &__link {
+                font-size: 40px;
+                color: #fff;
+            }
+        }
+
+    }
+
+    .menu.active {
+        top: 0;
+    }
+
+    .header-burger.active::before {
+        transform: rotate(45deg);
+        top: 9px;
+    }
+
+    .header-burger.active::after {
+        transform: rotate(-45deg);
+        width: 100%;
+        bottom: 9px;
+    }
+
+    .header-burger.active span {
+        transform: scale(0);
+    }
+
+    .swiper-text {
+        min-height: 600px;
+
+        &__accent {
+            font-weight: 900;
+            font-size: 150px;
+            line-height: 225px;
+        }
+
+        &__title {
+            font-weight: bold;
+            font-size: 60px;
+            line-height: 70px;
+        }
+    }
+
+    .swiper {
+        &-container {
+            max-width: 100%;
+            min-height: 600px;
+            height: 600px;
+        }
+
+        &-wrapper {
+            width: 100%;
+            min-height: 600px;
+        }
+
+        &-slide {
+            width: 100%;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+
+    .accent-block {
+        min-height: 924px;
+    }
+
+    .header-bottom {
+        min-height: 600px;
+        height: 600px;
+    }
+
+    .swiper-text__form {
+        width: 462px;
+        min-width: 462px;
+    }
+
+    .header-label {
+        bottom: 120px;
+    }
+
+    .swiper-buttons {
+        position: relative;
+        bottom: 24px;
+    }
+
+    .swiper-text {
+        width: 60%;
+    }
+
+    .swiper-image {
+        width: 40%;
+        background: url('../images/salad.png') left 25%, url('../images/dot.svg') left center;
+        background-repeat: no-repeat;
+        background-size: 60%;
+        position: relative;
+        img {
+            top: 235px;
+        }
+    }
 
 }

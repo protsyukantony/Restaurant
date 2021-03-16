@@ -1,0 +1,40 @@
+.food {
+    width: 100%;
+    min-height: 1280px;
+    background-color: $primary;
+    font-family: 'Poppins', sans-serif;
+
+    &-text {
+        width: 100%;
+        padding: 50px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        &__title {
+            width: 636px;
+            text-transform: capitalize;
+            position: relative;
+
+            &::before {
+                content: '';
+                position: absolute;
+                left: -55px;
+                top: -8px;
+                width: 25px;
+                height: 140px;
+                background-color: $secondary;
+
+            }
+        }
+
+        &__subtitle {
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 24px;
+            color: $text-gray;
+            display: inline-block;
+            width: 610px;
+        }
+    }
+}
