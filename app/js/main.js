@@ -9,8 +9,10 @@ const swiper = new Swiper('.swiper-container', {
 });
 
 
+
+
 $(function () {
   $('.header-burger').on('click', function () {
-    $('.header-burger,.menu').toggleClass('active')
-  })
-})
+    $('.header-burger,.menu').toggleClass('active');
+  });
+});

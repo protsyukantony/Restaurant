@@ -4,6 +4,14 @@
     background-color: $primary;
     font-family: 'Poppins', sans-serif;
 
+    &-row {
+        max-width: 85%;
+        height: 800px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
     &-text {
         width: 100%;
         padding: 50px 0;
@@ -35,6 +43,173 @@
             color: $text-gray;
             display: inline-block;
             width: 610px;
+        }
+    }
+}
+
+.cards {
+    max-width: 640px;
+    min-height: 636px;
+    border-radius: 20px;
+    margin-right: 40px;
+    position: relative;
+    z-index: 1;
+
+    &-text {
+        max-width: 640px;
+        min-height: 636px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-end;
+        position: relative;
+        padding-left: 60px;
+
+        &::before {
+            content: '';
+            width: 100%;
+            height: 270px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background-color: rgba($secondary, 0.7);
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+
+        &__link {
+            display: flex;
+            background-color: #fff;
+            color: $secondary;
+            font-size: 16px;
+            line-height: 24px;
+            padding: 20px 60px;
+            align-self: flex-end;
+            margin-bottom: 37px;
+            border-top-left-radius: 100px;
+            border-bottom-left-radius: 100px;
+            position: relative;
+            z-index: 2;
+        }
+
+        &__location {
+            font-size: 14px;
+            line-height: 24px;
+            position: relative;
+            z-index: 2;
+            color: #fff;
+            margin-left: 30px;
+            margin-top: 20px;
+
+            &::before {
+                content: '';
+                background-image: url('../images/location.svg');
+                top: 0;
+                left: -30px;
+                width: 20px;
+                height: 25px;
+                position: absolute;
+            }
+        }
+
+        &__descr {
+            font-size: 14px;
+            line-height: 24px;
+            color: #fff;
+            position: relative;
+            z-index: 2;
+            text-transform: capitalize;
+            margin-top: 20px;
+        }
+
+        &__title {
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 24px;
+            color: #fff;
+            position: relative;
+            z-index: 2;
+        }
+    }
+}
+
+.cards:nth-child(1) {
+    background-image: url('../images/pizza.jpg');
+}
+
+.cards:nth-child(2) {
+    background-image: url('../images/burger.jpg');
+}
+
+.card-two {
+    position: relative;
+    z-index: 3;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -24px;
+        right: -28px;
+        width: 315px;
+        height: 385px;
+        z-index: -1;
+        background-image: url('../images/angle-dots.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+}
+
+
+.card-one {
+    position: relative;
+    z-index: 3;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: -72px;
+        left: 15px;
+        width: 315px;
+        height: 385px;
+        z-index: -2;
+        background-image: url('../images/line-dots.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+}
+
+.more {
+    width: 120px;
+
+    &-link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 18px;
+            width: 50px;
+            height: 2px;
+            background-color: $secondary;
+        }
+
+        &__img {
+            width: 40px;
+            margin-bottom: 20px;
+            height: 40px;
+
+
+        }
+
+        &__text {
+            font-size: 14px;
+            line-height: 24px;
+            text-transform: capitalize;
+            color: $secondary;
         }
     }
 }
