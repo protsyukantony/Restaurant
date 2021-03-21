@@ -1,0 +1,152 @@
+.booking {
+    max-width: 100%;
+    min-height: 1090px;
+    background-color: $section-bg;
+    position: relative;
+    font-family: Poppins;
+
+    &__sheet-left {
+        position: absolute;
+        bottom: 20%;
+        left: -320px;
+        width: 700px;
+    }
+
+    &__sheet-right {
+        position: absolute;
+        top: 30%;
+        right: 0;
+    }
+
+    &-overlay {
+        max-width: 100%;
+        min-height: 1090px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &-inner {
+        width: 1200px;
+        height: 560px;
+        background-color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        &__title {
+            font-weight: 500;
+            font-size: 36px;
+            line-height: 24px;
+            color: $text-blue;
+            position: relative;
+            margin-bottom: 60px;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: -50px;
+                left: 45px;
+                height: 15px;
+                width: 230px;
+                background-color: $secondary;
+            }
+        }
+
+        &__form {
+            height: 90px;
+            width: 544px;
+            background-color: #fff;
+            padding: 14px;
+            display: flex;
+            justify-content: space-between;
+            box-shadow: 2px 2px 30px 2px #FFF5EC;
+
+
+            input {
+                margin-left: 25px;
+                font-size: 16px;
+                line-height: 24px;
+                border: none;
+                outline: none;
+                width: 300px;
+
+                &::placeholder {
+                    color: $text-gray;
+                }
+            }
+
+            button {
+                font-weight: 600;
+                font-size: 30px;
+                line-height: 90px;
+                padding: 16px 36px;
+                border: none;
+                outline: none;
+                background-color: $secondary;
+                color: #fff;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+    }
+
+}
+
+.reservation {
+    width: 400px;
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    input {
+        width: 100%;
+        margin-top: 10px;
+        border: none;
+        color: $text-gray;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    &-date {
+        width: 95px;
+
+        &__label {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
+    &-time {
+        width: 80px;
+
+        &__label {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
+    &-people {
+        width: 70px;
+
+        &__label {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            select {
+                margin-top: 10px;
+                border: none;
+                outline: none;
+                font-family: 'Poppins', sans-serif;
+                color: $text-gray;
+                appearance: none;
+            }
+        }
+    }
+}
