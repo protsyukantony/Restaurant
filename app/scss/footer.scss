@@ -1,0 +1,99 @@
+.footer {
+    min-height: 950px;
+    background: $primary url('../images/flower.png');
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    font-family: 'Poppins', sans-serif;
+    padding: 30px 0;
+
+    &-inner {
+        width: 100%;
+        min-height: 950px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    &-bottom {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    &-link {
+        margin-right: 70px;
+    }
+
+    &-menu {
+        margin-bottom: 200px;
+
+        &__list {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            width: 450px;
+        }
+
+        &__link {
+            font-size: 16px;
+            line-height: 24px;
+            color: $text-gray;
+        }
+    }
+
+    &-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &__title {
+            margin-bottom: 30px;
+            color: $text-blue;
+            font-size: 36px;
+            line-height: 48px;
+            text-align: center;
+            max-width: 533px;
+            text-transform: capitalize;
+        }
+
+        &__descr {
+            margin-bottom: 60px;
+            max-width: 533px;
+            font-size: 14px;
+            line-height: 24px;
+            color: $text-gray;
+            text-align: center;
+        }
+    }
+
+    &-form {
+        margin-bottom: 60px;
+        width: 550px;
+        height: 90px;
+        background-color: #fff;
+        border-radius: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 40px;
+
+        &__email {
+            border: none;
+            font-family: 'Poppins', sans-serif;
+            height: 60px;
+            padding: 20px;
+            width: 360px;
+        }
+
+        &__button {
+            width: 56px;
+            height: 56px;
+            border-radius: 100px;
+            background-color: $secondary;
+            border: none;
+
+        }
+    }
+}
