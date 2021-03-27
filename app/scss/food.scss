@@ -214,3 +214,186 @@
         }
     }
 }
+
+@media (max-width: 1200px) {
+    .cards {
+        max-width: 400px;
+        min-height: 400px;
+        height: 400px;
+
+        &-text {
+            min-width: 400px;
+            min-height: 400px;
+            height: 400px;
+
+            &::before {
+                height: 195px;
+            }
+
+            &__link {
+                margin-bottom: 22px;
+                padding: 13px 40px;
+                font-size: 16px;
+                line-height: 24px;
+            }
+
+            &__location {
+                position: relative;
+                bottom: -55px;
+            }
+
+            &__descr {
+                max-width: 289px;
+                position: relative;
+                bottom: -50px;
+                margin-top: 0;
+            }
+
+            &__title {
+                position: relative;
+                bottom: -30px;
+            }
+        }
+    }
+
+    .food {
+        &-row {
+            max-width: 100%;
+        }
+
+        &-text {
+            &__title {
+                font-weight: 500;
+                font-size: 48px;
+                line-height: 62px;
+                margin-left: 30px;
+            }
+
+            &__subtitle {
+                max-width: 370px;
+            }
+        }
+    }
+}
+
+
+
+@media (max-width: 1000px) {
+    .food {
+        min-height: 1500px;
+
+        &-text {
+            display: flex;
+            flex-direction: column;
+
+            &__title {
+                max-width: 90%;
+                width: 90%;
+                margin-bottom: 30px;
+            }
+
+            &__subtitle {
+                max-width: 90%;
+                width: 90%;
+                margin-bottom: 50px;
+            }
+        }
+
+        &-row {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    .cards {
+        width: 60%;
+        max-width: 60%;
+        min-width: 60%;
+        min-height: 450px;
+        margin-bottom: 30px;
+
+        &-text {
+            min-height: 450px;
+
+        }
+    }
+}
+
+
+@media (max-width: 800px) {
+    .food {
+        min-height: 1700px;
+
+        &-text {
+            display: flex;
+            flex-direction: column;
+
+            &__title {
+                max-width: 90%;
+                width: 90%;
+                margin-bottom: 30px;
+                font-weight: 500;
+                font-size: 36px;
+                line-height: 48px;
+            }
+
+            &__subtitle {
+                max-width: 90%;
+                width: 90%;
+                margin-bottom: 50px;
+            }
+        }
+
+        &-row {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    .cards {
+        width: 90%;
+        max-width: 90%;
+        min-width: 90%;
+        min-height: 450px;
+        margin-bottom: 30px;
+        margin-right: 0;
+
+        &-text {
+            min-height: 450px;
+            max-width: 100%;
+
+        }
+    }
+
+    .cards:nth-child(1),
+    .cards:nth-child(2) {
+        background-size: cover;
+    }
+}
+
+@media (max-width: 470px) {
+    .food {
+        &-text {
+            &__title {
+                font-size: 36px !important;
+                line-height: 40px !important;
+            }
+        }
+    }
+
+    .cards {
+        width: 100%;
+        max-width: 100%;
+        min-width: 100%;
+        min-height: 380px;
+        margin-bottom: 30px;
+        margin-right: 0;
+
+        &-text {
+            min-height: 380px;
+            max-width: 100%;
+            min-width: 100%;
+
+        }
+    }
+}

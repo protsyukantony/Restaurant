@@ -4,8 +4,7 @@ const swiper = new Swiper('.swiper-container', {
     prevEl: '.swiper-button-prev',
   },
   slidesPerView: 1,
-  loop: true,
-  autoplay: true,
+  loop: true
 });
 
 
