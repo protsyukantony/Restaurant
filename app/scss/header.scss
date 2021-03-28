@@ -483,6 +483,14 @@
         width: 395px;
         min-width: 395px;
     }
+
+    .menu {
+        &-list {
+            &__link {
+                font-size: 30px;
+            }
+        }
+    }
 }
 
 
@@ -506,6 +514,14 @@
             bottom: 520px;
 
             z-index: 1;
+        }
+    }
+
+    .menu {
+        &-list {
+            &__link {
+                font-size: 26px;
+            }
         }
     }
 
@@ -695,6 +711,14 @@
         }
     }
 
+    .menu {
+        &-list {
+            &__link {
+                font-size: 24px;
+            }
+        }
+    }
+
     .swiper {
         &-container {
             height: 806px;
@@ -702,6 +726,14 @@
 
         &-image {
             min-height: 500px;
+        }
+
+        &-text {
+            &__form {
+                input {
+                    width: 360px;
+                }
+            }
         }
     }
 

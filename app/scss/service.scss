@@ -535,25 +535,31 @@
     .service {
         &-people {
             &__image {
-                min-width: 120px;
-                min-height: 120px;
-                height: 120px;
+                min-width: 100px;
+                min-height: 100px;
+                height: 100px;
                 margin-right: 5px;
 
                 img {
-                    max-width: 60%;
+                    max-width: 50%;
+                }
+            }
+
+            &__text {
+                span {
+                    width: 200px;
                 }
             }
         }
 
         &-plate {
             &__image {
-                min-width: 120px;
-                min-height: 120px;
-                height: 120px;
+                min-width: 100px;
+                min-height: 100px;
+                height: 100px;
 
                 img {
-                    max-width: 60%;
+                    max-width: 50%;
                 }
             }
             &__text {

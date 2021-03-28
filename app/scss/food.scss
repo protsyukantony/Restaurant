@@ -136,28 +136,19 @@
 
 .cards:nth-child(1) {
     background-image: url('../images/pizza.jpg');
+    background-size: cover;
 }
 
 .cards:nth-child(2) {
     background-image: url('../images/burger.jpg');
+    background-size: cover;
 }
 
 .card-two {
     position: relative;
     z-index: 3;
 
-    &::after {
-        content: '';
-        position: absolute;
-        bottom: -24px;
-        right: -28px;
-        width: 315px;
-        height: 385px;
-        z-index: -1;
-        background-image: url('../images/angle-dots.svg');
-        background-repeat: no-repeat;
-        background-size: contain;
-    }
+
 }
 
 
@@ -165,18 +156,6 @@
     position: relative;
     z-index: 3;
 
-    &::after {
-        content: '';
-        position: absolute;
-        top: -72px;
-        left: 15px;
-        width: 315px;
-        height: 385px;
-        z-index: -2;
-        background-image: url('../images/line-dots.svg');
-        background-repeat: no-repeat;
-        background-size: contain;
-    }
 }
 
 .more {
@@ -361,7 +340,7 @@
         &-text {
             min-height: 450px;
             max-width: 100%;
-
+            padding-left: 20px;
         }
     }
 
@@ -387,7 +366,7 @@
         min-width: 100%;
         min-height: 380px;
         margin-bottom: 30px;
-        margin-right: 0;
+        margin-right: 10px;
 
         &-text {
             min-height: 380px;
